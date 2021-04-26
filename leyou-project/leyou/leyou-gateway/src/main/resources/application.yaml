@@ -1,0 +1,32 @@
+server:
+  port: 10010
+spring:
+  application:
+    name: leyou-gateway
+eureka:
+  client:
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+      ip-address: 127.0.0.1
+      prefer-ip-address: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMillisecond: 10000 # 熔断超时时长：10000ms
+zuul:
+  prefix: /api # 路由路径前缀
+  routes:
+    leyou-service: /item/** # 商品微服务的映射路径
+    search-service: /search/**
+    upload-service:
+      path: /upload/**
+      serviceId: upload-service
+      strip-prefix: false
+
+
+  ignored-services:
+    - upload-service

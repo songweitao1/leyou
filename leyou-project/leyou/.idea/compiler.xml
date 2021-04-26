@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="leyou-common" />
+        <module name="leyou-gateway" />
+        <module name="leyou-item-interface" />
+        <module name="leyou-item-service" />
+        <module name="leyou-registry" />
+        <module name="leyou-search" />
+        <module name="leyou-searchs" />
+        <module name="leyou-upload" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="leyou-good-web" target="1.8" />
+      <module name="leyou-goods-web" target="1.8" />
+      <module name="leyou-item" target="1.8" />
+      <module name="leyou-search" target="1.8" />
+      <module name="leyousearch" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="leyou-common" options="-parameters" />
+      <module name="leyou-gateway" options="-parameters" />
+      <module name="leyou-good-web" options="-parameters" />
+      <module name="leyou-goods-web" options="-parameters" />
+      <module name="leyou-item" options="-parameters" />
+      <module name="leyou-item-interface" options="-parameters" />
+      <module name="leyou-item-service" options="-parameters" />
+      <module name="leyou-registry" options="-parameters" />
+      <module name="leyou-search" options="-parameters" />
+      <module name="leyou-searchs" options="-parameters" />
+      <module name="leyou-upload" options="-parameters" />
+      <module name="leyousearch" options="-parameters" />
+    </option>
+  </component>
+</project>
